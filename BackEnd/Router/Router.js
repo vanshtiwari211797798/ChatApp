@@ -83,7 +83,7 @@ const sendMessage = async (req, res) => {
         const sender = req.user._id
 
 
-        let conversations = await conversationMo-del.findOne({
+        let conversations = await conversationModel.findOne({
             participants: { $all: [sender, receiver] },
         })
 
